@@ -2,17 +2,37 @@
 <html>
 <head>
   <link rel="stylesheet" href="stylesheet.css">
+      <style>
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-image {
+            max-width: 100%;
+            max-height: 300px; /* You can adjust the maximum image height as needed */
+            transition: opacity 0.5s;
+        }
+
+        .carousel-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
+
 <body>
-<img src="profilepic.png" 	style="image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
- 	image-rendering: -moz-crisp-edges;          /* Firefox                        */
- 	image-rendering: -o-crisp-edges;            /* Opera                          */
- 	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
- 	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
- 	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */ border:black; border-width:1px; border-style:solid;">
 
-<h1 id="heading" onclick="document.getElementById('heading').innerHTML = 'jasperpowrie.com'">j҉a҉s҉p҉e҉r҉p҉o҉w҉r҉i҉e҉.҉c҉o҉m҉</h1>
+<img id="randomImage" class="logo" style="position:inline" src="">
 
+<h1 class="flashing">j҉a҉s҉p҉e҉r҉p҉o҉w҉r҉i҉e҉.҉c҉o҉m҉</h1>
+
+<div class="div1"> <b></b>
 <a href="fireplace.html">Fireplace</a>
 <br>
 <a href="corridor breach.html">Corridor breach</a>
@@ -24,5 +44,36 @@
 <a href="oldphone.html">Old phone</a>
 <br>
 <a href="taking somewhere.html">Taking somewhere</a>
+</div>
+		    <script>
+        // Array of image URLs
+        const imageUrls = [
+      
+            'profilepic1.png',
+			'profilepic2.png',
+            'profilepic3.png',
+			'profilepic4.png',
+            'profilepic5.png',
+			'profilepic6.png',
+            'profilepic7.png',
+			'profilepic8.png',
+            'profilepic9.png',
+            
+            // Add more image URLs as needed
+        ];
+
+        // Function to get a random index from the array
+        function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Get a random image URL
+        const randomIndex = getRandomIndex(imageUrls.length);
+        const randomImageUrl = imageUrls[randomIndex];
+
+        // Set the src attribute of the img element to the random image URL
+        const randomImageElement = document.getElementById('randomImage');
+        randomImageElement.src = randomImageUrl;
+    </script>
 </body>
 </html> 
